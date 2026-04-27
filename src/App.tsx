@@ -182,26 +182,26 @@ const Hero = () => {
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length);
-    }, 50000);
+    }, 5000);
     return () => clearInterval(timer);
   }, []);
 
   return (
     <section className="relative h-screen min-h-[700px] overflow-hidden flex items-center snap-start">
-      <AnimatePresence mode="wait">
+      <AnimatePresence>
         <motion.div 
           key={`bg-${currentSlide}`}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          transition={{ duration: 1 }}
+          transition={{ duration: 0.8, ease: "easeInOut" }}
           className="absolute inset-0 z-0"
         >
           <div className="absolute inset-0 bg-gradient-to-r from-brand-dark via-brand-dark/40 to-transparent z-10" />
           <img 
             src={slides[currentSlide].bg} 
             className="w-full h-full object-cover opacity-70" 
-            alt="" 
+            alt={`Slide background ${currentSlide}`} 
             referrerPolicy="no-referrer" 
           />
         </motion.div>
@@ -212,7 +212,7 @@ const Hero = () => {
           <motion.div 
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.4 }}
           >
             <AnimatePresence mode="wait">
               <motion.div
@@ -267,20 +267,20 @@ const Hero = () => {
 
           <div className="relative flex items-center justify-center">
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full opacity-20" />
-            <AnimatePresence mode="wait">
+            <AnimatePresence>
               <motion.div 
                 key={`product-${currentSlide}`}
                 initial={{ opacity: 0, scale: 0.8, rotate: -5 }}
                 animate={{ opacity: 1, scale: 1, rotate: 0 }}
-                exit={{ opacity: 0, scale: 0.9, rotate: 5 }}
-                transition={{ duration: 0.8 }}
+                exit={{ opacity: 0, scale: 1.1, rotate: 5, position: "absolute" }}
+                transition={{ duration: 0.6, ease: "easeOut" }}
                 className="relative z-20 w-full flex justify-center"
               >
                 <div className="w-full h-[200px] sm:h-[300px] lg:h-[500px] flex items-center justify-center">
                   <img 
                     src={slides[currentSlide].product} 
                     className="max-w-[70%] lg:max-w-full max-h-full object-contain drop-shadow-[0_35px_35px_rgba(0,0,0,0.5)] rounded-3xl" 
-                    alt="Tribulus Power" 
+                    alt="Tribulus Power Product" 
                     referrerPolicy="no-referrer" 
                   />
                 </div>
@@ -390,13 +390,13 @@ const Benefits = () => {
     <section id="benefits" className="py-32 bg-brand-dark relative overflow-hidden snap-start">
       {/* Dynamic Background Layer */}
       <div className="absolute inset-0 z-0">
-        <AnimatePresence mode="wait">
+        <AnimatePresence>
           <motion.div
             key={hoveredIndex !== null ? benefitsData[hoveredIndex].bg : 'default'}
             initial={{ opacity: 0, scale: 1.1 }}
             animate={{ opacity: 0.3, scale: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.4 }}
+            exit={{ opacity: 0, position: "absolute" }}
+            transition={{ duration: 0.6, ease: "easeInOut" }}
             className="absolute inset-0"
           >
             <img 
@@ -463,7 +463,7 @@ const PremiumComposition = () => {
       name: "L-Arginine", 
       mg: "1000 mg", 
       desc: "Amino acid that expands blood vessels and improves blood flow throughout the body",
-      image: "./LArginine.png"
+      image: "/LArginine.png"
     },
     { 
       name: "L-Carnitine", 
@@ -539,14 +539,14 @@ const PremiumComposition = () => {
           </div>
 
           <div className="relative group hidden lg:block">
-            <AnimatePresence mode="wait">
+            <AnimatePresence>
               <motion.div 
                 key={activeTab}
-                initial={{ opacity: 0, scale: 0.9, rotateY: 20 }}
-                animate={{ opacity: 1, scale: 1, rotateY: 0 }}
-                exit={{ opacity: 0, scale: 0.95, rotateY: -20 }}
-                transition={{ duration: 0.4 }}
-                className="relative aspect-square rounded-[3rem] overflow-hidden border-4 border-white/10 shadow-[0_0_100px_rgba(173,255,47,0.1)]"
+                initial={{ opacity: 0, filter: "blur(10px)", scale: 0.9 }}
+                animate={{ opacity: 1, filter: "blur(0px)", scale: 1 }}
+                exit={{ opacity: 0, filter: "blur(10px)", scale: 1.1, position: "absolute" }}
+                transition={{ duration: 0.5 }}
+                className="relative aspect-square rounded-[3rem] overflow-hidden border-4 border-white/10 shadow-[0_0_100px_rgba(173,255,47,0.1)] w-full"
               >
                 <img 
                   src={ingredients[activeTab].image} 
