@@ -36,7 +36,7 @@ import { Badge } from "@/components/ui/badge";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 
 // --- Assets ---
-const PRODUCT_BOTTLE = "/product.png"; 
+const PRODUCT_BOTTLE = "/images/product.png"; 
 const HERO_BG = "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=2120&auto=format&fit=crop";
 const ATHLETE_VISUAL = "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=1470&auto=format&fit=crop";
 
@@ -90,7 +90,7 @@ const Navbar = () => {
       <div className="container mx-auto px-6 flex items-center justify-between">
         <div className="flex items-center gap-3 group cursor-pointer" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
           <div className="relative w-12 h-12">
-            <img src="/logo.png" className="w-full h-full object-cover relative z-10" alt="Logo" referrerPolicy="no-referrer" />
+            <img src="/images/logo.png" className="w-full h-full object-cover relative z-10" alt="Logo" referrerPolicy="no-referrer" />
             <div className="absolute inset-0 bg-brand-lime/20 blur-xl rounded-full group-hover:bg-brand-lime/40 transition-all opacity-0 group-hover:opacity-100" />
           </div>
           <div className="flex flex-col leading-none italic font-black uppercase">
@@ -163,17 +163,17 @@ const Hero = () => {
 
   const slides = [
     {
-      bg: '/anastase-maragos-9dzWZQWZMdE-unsplash.jpg',
-      product: '/prod3.png',
+      bg: '/images/anastase-maragos-9dzWZQWZMdE-unsplash.jpg',
+      product: '/images/prod3.png',
       accent: "Natural Strength & Energy!"
     },
     {
-      bg: "/karsten-winegeart-0Wra5YYVQJE-unsplash.jpg",
-      product: '/product-box.png',
+      bg: "/images/karsten-winegeart-0Wra5YYVQJE-unsplash.jpg",
+      product: '/images/product-box.png',
       accent: "Boost Your Vitality!"
     },
     {
-      bg: "/gorilla-freak-wt5jg8_WrJg-unsplash.jpg",
+      bg: "/images/gorilla-freak-wt5jg8_WrJg-unsplash.jpg",
       product: PRODUCT_BOTTLE,
       accent: "Peak Performance!"
     }
@@ -380,7 +380,7 @@ const Benefits = () => {
       icon: Trophy, 
       title: "Fast Recovery", 
       desc: "Speeds up muscle recovery after intense training sessions.",
-      bg: "/recovery.png"
+      bg: "/images/recovery.png"
     },
   ];
 
@@ -463,7 +463,7 @@ const PremiumComposition = () => {
       name: "L-Arginine", 
       mg: "1000 mg", 
       desc: "Amino acid that expands blood vessels and improves blood flow throughout the body",
-      image: "/LArginine.png"
+      image: "/images/LArginine.png"
     },
     { 
       name: "L-Carnitine", 
@@ -722,7 +722,7 @@ const AudienceSection = () => (
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         {[
-          { emoji: "💪", label: "Bodybuilders", desc: "Maximize muscle growth, strength gains, and recovery between intense training sessions", bg: "https://images.unsplash.com/photo-1583454110551-21f2fa2ec617?q=80&w=1470&auto=format&fit=crop" },
+          { emoji: "💪", label: "Bodybuilders", desc: "Maximize muscle growth, strength gains, and recovery between intense training sessions", bg: "/images/arnold.webp" },
           { emoji: "⚡", label: "Athletes", desc: "Enhance endurance, performance, and competitive edge in any sport or physical activity", bg: "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?q=80&w=1470&auto=format&fit=crop" },
           { emoji: "🏋️", label: "Fitness Enthusiasts", desc: "Support your fitness journey with increased energy, stamina, and faster results", bg: "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=1470&auto=format&fit=crop" },
           { emoji: "🕺", label: "Active Men 18+", desc: "Maintain vitality, energy, and male health in your daily life and work", bg: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1470&auto=format&fit=crop" },
@@ -866,7 +866,7 @@ const OrderSection = () => {
 
             <div className="bg-black relative overflow-hidden flex items-center justify-center p-12">
                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80%] h-[80%] bg-brand-lime/20 blur-[120px] rounded-full pointer-events-none" />
-               <img src='/product-box.png' className="w-full max-w-sm relative z-10 drop-shadow-[0_45px_45px_rgba(0,0,0,0.6)] rounded-3xl scale-130" alt="" referrerPolicy="no-referrer" />
+               <img src='/images/product-box.png' className="w-full max-w-sm relative z-10 drop-shadow-[0_45px_45px_rgba(0,0,0,0.6)] rounded-3xl scale-130" alt="" referrerPolicy="no-referrer" />
             </div>
           </div>
         </div>
@@ -882,7 +882,7 @@ const Footer = () => (
         <div>
           <div className="flex items-center gap-3 mb-6 group cursor-pointer">
             <div className="relative w-12 h-12">
-              <img src="/input_file_0.png" className="w-full h-full object-contain relative z-10" alt="Logo" referrerPolicy="no-referrer" />
+              <img src="/images/input_file_0.png" className="w-full h-full object-contain relative z-10" alt="Logo" referrerPolicy="no-referrer" />
               <div className="absolute inset-0 bg-brand-lime/20 blur-xl rounded-full opacity-50" />
             </div>
             <div className="flex flex-col leading-none italic font-black uppercase">
