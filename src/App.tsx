@@ -94,7 +94,7 @@ const Navbar = () => {
             <div className="absolute inset-0 bg-brand-lime/20 blur-xl rounded-full group-hover:bg-brand-lime/40 transition-all opacity-0 group-hover:opacity-100" />
           </div>
           <div className="flex flex-col leading-none italic font-black uppercase">
-            <div className="flex items-center gap-0.5 text-2xl tracking-tighter text-white">
+            <div className="flex items-center gap-0.5 text-xl tracking-tighter text-white">
               <span>TR</span>
               <div className="relative flex items-center justify-center -mx-0.5">
                 <Zap className="w-6 h-6 text-brand-lime fill-brand-lime transform -translate-y-0.5" />
@@ -150,7 +150,7 @@ const Navbar = () => {
                 {item.name}
               </a>
             ))}
-            <Button className="w-full bg-brand-lime text-black font-black uppercase italic py-6 text-lg tracking-[0.2em]">Order Now</Button>
+            <Button className="w-full bg-brand-lime text-black font-black uppercase italic py-3 sm:py-6 text-sm sm:text-lg tracking-[0.2em]">Order Now</Button>
           </motion.div>
         )}
       </AnimatePresence>
@@ -221,40 +221,40 @@ const Hero = () => {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -10 }}
               >
-                <Badge className="bg-brand-lime/10 text-brand-lime border-brand-lime/20 mb-6 py-1 px-4 text-sm font-bold uppercase tracking-wider">
+                <Badge className="bg-brand-lime/10 text-brand-lime border-brand-lime/20 mb-6 py-1 px-4 text-xs font-bold uppercase tracking-wider">
                   {slides[currentSlide].accent}
                 </Badge>
               </motion.div>
             </AnimatePresence>
             
-            <h1 className="text-4xl sm:text-6xl lg:text-8xl font-black text-white leading-tight mb-4 md:mb-6 italic">
-              TRIBULUS <br />
+            <h1 className="text-2xl sm:text-6xl lg:text-8xl font-black text-white leading-tight mb-4 md:mb-6 italic">
+              TRIBULUS <br className="hidden sm:block" />
               <span className="text-brand-lime drop-shadow-[0_0_15px_rgba(173,255,47,0.5)]">POWER</span>
             </h1>
-            <p className="text-base md:text-lg text-white/70 max-w-xl mb-8 md:mb-10 leading-relaxed italic">
+            <p className="text-[12px] sm:text-base md:text-lg text-white/70 max-w-xl mb-4 md:mb-10 leading-relaxed italic">
               Advanced dietary supplement designed to support men's health, boost physical performance, endurance, and overall body vitality. Experience the power of natural ingredients working together for maximum results.
             </p>
 
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 sm:gap-4 md:gap-6 mb-6 md:mb-10 text-center">
-              <div className="bg-white/5 backdrop-blur-sm p-3 sm:p-4 rounded-xl border border-white/10 flex sm:flex-col items-center sm:justify-center justify-between px-6 sm:px-4">
-                <div className="text-brand-lime font-bold text-base sm:text-lg md:text-xl italic">90 Bottles</div>
-                <div className="text-[10px] text-white/50 uppercase">Per Box</div>
+            <div className="grid grid-cols-3 sm:grid-cols-3 gap-2 sm:gap-4 md:gap-6 mb-3 md:mb-10 text-center">
+              <div className="bg-white/5 backdrop-blur-sm p-2 sm:p-4 rounded-xl border border-white/10 flex flex-col items-center justify-center">
+                <div className="text-brand-lime font-bold text-[10px] sm:text-lg md:text-xl italic">90 Bottles</div>
+                <div className="text-[8px] sm:text-[10px] text-white/50 uppercase">Per Box</div>
               </div>
-              <div className="bg-white/5 backdrop-blur-sm p-3 sm:p-4 rounded-xl border border-white/10 flex sm:flex-col items-center sm:justify-center justify-between px-6 sm:px-4">
-                <div className="text-brand-lime font-bold text-base sm:text-lg md:text-xl italic">10 ml</div>
-                <div className="text-[10px] text-white/50 uppercase">Each Bottle</div>
+              <div className="bg-white/5 backdrop-blur-sm p-2 sm:p-4 rounded-xl border border-white/10 flex flex-col items-center justify-center">
+                <div className="text-brand-lime font-bold text-[10px] sm:text-lg md:text-xl italic">10 ml</div>
+                <div className="text-[8px] sm:text-[10px] text-white/50 uppercase">Each Bottle</div>
               </div>
-              <div className="bg-white/5 backdrop-blur-sm p-3 sm:p-4 rounded-xl border border-white/10 flex sm:flex-col items-center sm:justify-center justify-between px-6 sm:px-4">
-                <div className="text-brand-lime font-bold text-base sm:text-lg md:text-xl italic">Green Lemon</div>
-                <div className="text-[10px] text-white/50 uppercase">Flavor</div>
+              <div className="bg-white/5 backdrop-blur-sm p-2 sm:p-4 rounded-xl border border-white/10 flex flex-col items-center justify-center">
+                <div className="text-brand-lime font-bold text-[10px] sm:text-lg md:text-xl italic">Green Lemon</div>
+                <div className="text-[8px] sm:text-[10px] text-white/50 uppercase">Flavor</div>
               </div>
             </div>
 
-            <Button size="lg" className="bg-brand-lime text-black font-extrabold text-lg px-12 py-8 rounded-full hover:scale-105 transition-transform shadow-[0_0_30px_rgba(173,255,47,0.3)] uppercase italic">
+            <Button size="lg" className="bg-brand-lime text-black font-extrabold text-xs sm:text-lg px-6 py-4 sm:px-12 sm:py-8 rounded-full hover:scale-105 transition-transform shadow-[0_0_30px_rgba(173,255,47,0.3)] uppercase italic">
               ORDER NOW
             </Button>
             
-            <div className="flex gap-2 mt-12">
+            <div className="flex gap-2 mt-4">
               {slides.map((_, i) => (
                 <button 
                   key={i} 
@@ -291,7 +291,7 @@ const Hero = () => {
       </div>
       
       <div className="absolute bottom-10 left-1/2 -translate-x-1/2 z-30 animate-bounce cursor-pointer opacity-50 hover:opacity-100 transition-opacity">
-        <div className="w-6 h-10 border-2 border-white rounded-full flex justify-center p-1">
+        <div className=" hidden lg:block w-6 h-10 border-2 border-white rounded-full flex justify-center p-1">
           <div className="w-1 h-2 bg-white rounded-full" />
         </div>
       </div>
@@ -417,10 +417,10 @@ const Benefits = () => {
           >
             <Badge className="bg-brand-lime/10 text-brand-lime border-brand-lime/20 mb-6 py-1 px-4 text-sm font-bold uppercase tracking-[0.3em] italic">Potent Effects</Badge>
           </motion.div>
-          <h2 className="text-5xl md:text-7xl font-black mb-6 uppercase italic leading-none">
+          <h2 className="text-2xl md:text-7xl font-black mb-6 uppercase italic leading-none">
             POWERFUL <span className="text-brand-lime drop-shadow-[0_0_15px_rgba(173,255,47,0.4)]">BENEFITS</span>
           </h2>
-          <p className="text-white/50 max-w-2xl mx-auto italic text-lg border-t border-brand-lime/20 pt-6">
+          <p className="text-white/50 max-w-2xl mx-auto italic text-sm lg:text-lg border-t border-brand-lime/20 pt-6">
             Experience comprehensive support for your active lifestyle through our unique, bioavailable formula.
           </p>
         </div>
@@ -836,7 +836,7 @@ const OrderSection = () => {
                       <Label className="text-white/70 uppercase text-xs tracking-widest italic">Phone Number *</Label>
                       <Input required type="tel" className="bg-white/5 border-white/10 h-14 italic" placeholder="+1 (000) 000-0000" />
                     </div>
-                    <Button disabled={loading} size="lg" className="w-full bg-brand-lime text-black font-black text-lg py-8 uppercase italic tracking-widest shadow-[0_0_20px_rgba(173,255,47,0.3)]">
+                    <Button disabled={loading} size="lg" className="w-full bg-brand-lime text-black font-black text-sm sm:text-lg py-4 sm:py-8 uppercase italic tracking-widest shadow-[0_0_20px_rgba(173,255,47,0.3)]">
                       {loading ? "Processing..." : "Submit Order Request"}
                     </Button>
                     <p className="text-[10px] text-white/30 text-center uppercase tracking-wider italic">
